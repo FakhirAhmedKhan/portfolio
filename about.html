@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="icon" type="image/png" href="/assets/faveicon.png" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./about.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <span id="navText"></span>
+        </div>
+        <ul class="right">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./project.html" aria-current="page">Projects</a></li>
+          <li><a href="./contect.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="about-section">
+        <h1>About Me</h1>
+        <p>
+          Hello! I’m <strong>Fakhir Ahmed Khan</strong>, a passionate web
+          developer and designer.
+        </p>
+        <p>
+          I enjoy creating beautiful, user-friendly websites. I'm currently
+          learning full-stack development and improving my skills every day.
+        </p>
+        <h2>Skills I'm learning:</h2>
+      </section>
+        <ul class="skills">
+          <li class="skill-item">
+            <a class="skillLink" target="_blank" href="https://www.w3schools.com/"
+              >HTML, CSS, JavaScript</a
+            >
+          </li>
+          <li class="skill-item">
+            <a
+              class="skillLink" target="_blank"
+              href="https://www.w3schools.com/react/default.asp"
+              >React & Next.js</a
+            >
+          </li>
+          <li class="skill-item">
+            <a
+              class="skillLink" target="_blank"
+              href="https://www.youtube.com/watch?v=c9Wg6Cb_YlU&pp=ygUbVWkgdXh0dXRvcmlhbCBmb3IgYmVnaW5uZXJz0gcJCbAJAYcqIYzv"
+              >UI/UX Design</a
+            >
+          </li>
+          <li class="skill-item">
+            <a
+              class="skillLink" target="_blank"
+              href="https://www.w3schools.com/python/default.asp"
+              >Python</a
+            >
+          </li>
+          <li class="skill-item">
+            <a
+              class="skillLink" target="_blank"
+              href="https://www.youtube.com/watch?v=xsVTqzratPs&pp=ygUac2VvIHR1dG9yaWFsIGZvciBiZWdpbm5lcnM%3D"
+              >SEO Basics</a
+            >
+          </li>
+        </ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      const navText = document.getElementById("navText");
+      new Typed(navText, {
+        strings: ["About Me!"],
+        typeSpeed: 88,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true,
+        showCursor: false,
+      });
+    </script>
+  </body>
+</html>

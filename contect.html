@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contect</title>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./contect.css" />
+    <link rel="icon" type="image/png" href="/assets/faveicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="lift"><span id="conText"></span></div>
+        <div class="right">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./project.html" aria-current="page">Projects</a></li>
+            <li><a href="./contect.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Let's work together or just say hi!</p>
+      <form onsubmit="redirectToGoogleForm(); return false;">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="social">
+        <a href="https://linkedin.com/in/fakhirahmedkhan" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="fakhirahmed898@gmail.com" target="_blank">Email</a>
+      </div>
+    </section>
+
+    
+    <script>
+      var navText = document.getElementById("conText");
+      var typed2 = new Typed(navText, {
+        strings: ["Contact me!"],
+        typeSpeed: 88,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true,
+        showCursor: false,
+      });
+      function redirectToGoogleForm() {
+        window.location.href = "https://forms.gle/tozKdRWW2cbHqBZj8";
+      }
+    </script>
+  </body>
+</html>
