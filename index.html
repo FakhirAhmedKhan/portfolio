@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login / Sign Up</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
     <link rel="icon" type="image/png" href="./assets/faveicon.png" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Login Form -->
-        <form id="loginForm" class="active">
-            <h2 class="form-title">Login</h2>
-            <div class="form-group">
-                <label for="loginEmail">Email</label>
-                <input type="email" id="loginEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" required>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="toggle-form">
-                <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
-            </div>
-        </form>
+      <!-- Login Form -->
+      <form id="loginForm" class="active">
+        <h2 class="form-title">Login</h2>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required />
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="toggle-form">
+          <p>
+            Don't have an account?
+            <a href="#" onclick="toggleForms()">Sign Up</a>
+          </p>
+        </div>
+      </form>
 
-        <!-- Sign Up Form -->
-        <form id="signupForm">
-            <h2 class="form-title">Sign Up</h2>
-            <div class="form-group">
-                <label for="signupName">Full Name</label>
-                <input type="text" id="signupName" required>
-            </div>
-            <div class="form-group">
-                <label for="signupEmail">Email</label>
-                <input type="email" id="signupEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="signupPassword">Password</label>
-                <input type="password" id="signupPassword" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" required>
-            </div>
-            <button type="submit" class="btn">Sign Up</button>
-            <div class="toggle-form">
-                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
-            </div>
-        </form>
+      <!-- Sign Up Form -->
+      <form id="signupForm">
+        <h2 class="form-title">Sign Up</h2>
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" required />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" required />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" required />
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+        <div class="toggle-form">
+          <p>
+            Already have an account?
+            <a href="#" onclick="toggleForms()">Login</a>
+          </p>
+        </div>
+      </form>
     </div>
 
     <script>
-        function toggleForms() {
-            const loginForm = document.getElementById('loginForm');
-            const signupForm = document.getElementById('signupForm');
-            loginForm.classList.toggle('active');
-            signupForm.classList.toggle('active');
-        }
+      function toggleForms() {
+        const loginForm = document.getElementById("loginForm");
+        const signupForm = document.getElementById("signupForm");
+        loginForm.classList.toggle("active");
+        signupForm.classList.toggle("active");
+      }
 
-        // Handle Login
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-            
-            // Add your login validation here
-            // Redirect to home page after successful login
-            window.location.href = 'home.html';
+      // Handle Login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("loginEmail").value;
+          const password = document.getElementById("loginPassword").value;
+
+          // Add your login validation here
+          // Redirect to home page after successful login
+          window.location.href = "home.html";
         });
 
-        // Handle Sign Up
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('signupName').value;
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
-            const confirmPass = document.getElementById('confirmPassword').value;            if (password !== confirmPass) {
-                alert("Passwords don't match!");
-                return;
-            }
+      // Handle Sign Up
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("signupName").value;
+          const email = document.getElementById("signupEmail").value;
+          const password = document.getElementById("signupPassword").value;
+          const confirmPass = document.getElementById("confirmPassword").value;
+          if (password !== confirmPass) {
+            alert("Passwords don't match!");
+            return;
+          }
 
-            // Add your signup logic here
-            // Redirect to home page after successful signup
-            window.location.href = 'home.html';
+          // Add your signup logic here
+          // Redirect to home page after successful signup
+          window.location.href = "home.html";
         });
     </script>
-</body>
+  </body>
 </html>
