@@ -1,8 +1,9 @@
-* { 
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -10,76 +11,155 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f0f2f5;
+    background: #1e3a8a;
 }
 
 .container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button.skip-btn {
+    padding: 0.8rem;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-box {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 300px;
+    position: relative;
 }
 
-.form-group {
-    margin-bottom: 1rem;
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.btn {
-    width: 100%;
-    padding: 0.8rem;
-    background: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #1557b0;
-}
-
-.toggle-form {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.toggle-form a {
-    color: #1a73e8;
-    text-decoration: none;
-}
-
-.toggle-form a:hover {
-    text-decoration: underline;
-}
-
-.form-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #1a73e8;
-}
-
-#loginForm, #signupForm {
+.hidden {
     display: none;
 }
 
-#loginForm.active, #signupForm.active {
-    display: block;
+.skip-btn {
+    margin-top: 10px;
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.skip-btn:hover {
+    color: #0056b3;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.tabs label {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#loginTab:checked~.tabs label[for="loginTab"],
+#signupTab:checked~.tabs label[for="signupTab"] {
+    border-bottom: 2px solid #4a90e2;
+    color: #4a90e2;
+    /* border: none; */
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#loginTab:checked~.form.login,
+#signupTab:checked~.form.signup {
+    display: flex;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    background-color: #0056b3;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+button {
+    padding: 0.8rem;
+    background: #116fdb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357abd;
 }

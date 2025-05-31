@@ -7,96 +7,95 @@
     <link rel="stylesheet" href="login.css" />
     <link rel="icon" type="image/png" href="./assets/faveicon.png" />
   </head>
+
   <body>
     <div class="container">
-      <!-- Login Form -->
-      <form id="loginForm" class="active">
-        <h2 class="form-title">Login</h2>
-        <div class="form-group">
-          <label for="loginEmail">Email</label>
-          <input type="email" id="loginEmail" required />
-        </div>
-        <div class="form-group">
-          <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" required />
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <div class="toggle-form">
-          <p>
-            Don't have an account?
-            <a href="#" onclick="toggleForms()">Sign Up</a>
-          </p>
-        </div>
-      </form>
+      <!-- Tabs Control -->
+      <input type="radio" id="loginTab" name="tab" checked />
+      <input type="radio" id="signupTab" name="tab" />
+
+      <div class="tabs">
+        <label for="loginTab">Login</label>
+        <label for="signupTab">Sign Up</label>
+      </div>
 
       <!-- Sign Up Form -->
-      <form id="signupForm">
-        <h2 class="form-title">Sign Up</h2>
-        <div class="form-group">
-          <label for="signupName">Full Name</label>
-          <input type="text" id="signupName" required />
+      <form class="form signup">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" required />
         </div>
-        <div class="form-group">
-          <label for="signupEmail">Email</label>
-          <input type="email" id="signupEmail" required />
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required />
         </div>
-        <div class="form-group">
-          <label for="signupPassword">Password</label>
-          <input type="password" id="signupPassword" required />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <!-- Login Form -->
+      <form class="form login">
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required />
         </div>
-        <div class="form-group">
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" required />
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" required />
         </div>
-        <button type="submit" class="btn">Sign Up</button>
-        <div class="toggle-form">
-          <p>
-            Already have an account?
-            <a href="#" onclick="toggleForms()">Login</a>
-          </p>
-        </div>
+        <button type="submit">Login</button>
+        <button id="skipBtn" class="skip-btn">Skip Login</button>
       </form>
     </div>
-
     <script>
-      function toggleForms() {
-        const loginForm = document.getElementById("loginForm");
-        const signupForm = document.getElementById("signupForm");
-        loginForm.classList.toggle("active");
-        signupForm.classList.toggle("active");
-      }
+      // Get the login and signup forms
+      const loginForm = document.querySelector(".form.login");
+      const signupForm = document.querySelector(".form.signup");
 
-      // Handle Login
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const email = document.getElementById("loginEmail").value;
-          const password = document.getElementById("loginPassword").value;
+      // SIGN UP
+      signupForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          // Add your login validation here
-          // Redirect to home page after successful login
+        const username = signupForm.querySelector('input[type="text"]').value;
+        const password = signupForm.querySelector(
+          'input[type="password"]'
+        ).value;
+
+        const user = { username, password }; // Save user in localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        alert("Signup successful! Please login.");
+        document.getElementById("loginTab").checked = true; // Switch to login tab
+      });
+      // LOGIN
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = loginForm.querySelector('input[type="text"]').value;
+        const password = loginForm.querySelector(
+          'input[type="password"]'
+        ).value;
+
+        const savedUser = JSON.parse(localStorage.getItem("user"));
+
+        if (!savedUser) {
+          alert("No account found. Please sign up first.");
+          return;
+        }
+
+        if (
+          username === savedUser.username &&
+          password === savedUser.password
+        ) {
+          alert("Login successful!");
           window.location.href = "home.html";
-        });
-
-      // Handle Sign Up
-      document
-        .getElementById("signupForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const name = document.getElementById("signupName").value;
-          const email = document.getElementById("signupEmail").value;
-          const password = document.getElementById("signupPassword").value;
-          const confirmPass = document.getElementById("confirmPassword").value;
-          if (password !== confirmPass) {
-            alert("Passwords don't match!");
-            return;
-          }
-
-          // Add your signup logic here
-          // Redirect to home page after successful signup
-          window.location.href = "home.html";
-        });
+        } else {
+          alert("Invalid username or password");
+        }
+        const skipBtn = document.getElementById("skipBtn");
+      });
+      skipBtn.addEventListener("click", () => {
+        window.location.href = "home.html"; // ⏩ Directly go to home
+      });
     </script>
   </body>
 </html>
