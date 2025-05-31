@@ -25,7 +25,7 @@ body {
 
 button.skip-btn {
     padding: 0.8rem;
-    background: #4a90e2;
+    background: #116fdb;
     color: white;
     border: none;
     border-radius: 8px;
@@ -66,12 +66,13 @@ button.skip-btn {
 
 .skip-btn {
     margin-top: 10px;
-    background-color: transparent;
+    background-color: 116fdb;
     color: #007bff;
     border: none;
     cursor: pointer;
     text-decoration: underline;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .skip-btn:hover {
@@ -134,7 +135,7 @@ input[type="radio"] {
     top: 50%;
     transform: translateY(-50%);
     color: #aaa;
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
 }
 
 .input-group input {
