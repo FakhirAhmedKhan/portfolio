@@ -9,7 +9,36 @@ body {
   font-family: "Arial", sans-serif;
   color: #fdfdfd;
 }
+.gitIcon-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.gitIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
 
+.gitIcon:hover {
+  transform: scale(1.1);
+}
+
+.gitIconImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.gitIconImg:hover {
+  box-shadow: 0 0 10px #333;
+}
 .container {
   padding: 1rem;
   max-width: 1200px;
@@ -106,7 +135,7 @@ h1 {
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px;
-  border: 2px solid ;
+  border: 2px solid;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
