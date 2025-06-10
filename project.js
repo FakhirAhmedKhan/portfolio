@@ -58,42 +58,42 @@ const projects = [
         title: "🐍 Basic Python Programs Part 2",
         link: "https://github.com/FakhirAhmedKhan/Basic_Python_Program_Part_2",
         pra: "The second part of the beginner-level Python series focuses on more practice with functions,loops, user input, and basic problem-solving techniques.",
-    },
-    {
-        title: "🐍 Grading System in Python",
-        link: "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
-        pra: "A simple Python program that calculates student grades based on their marks. It uses conditional statements to assign grades like A, B, C, D, or F, helping users understand basic if-else logic and input handling.",
-    },
-    {
-        title: "🛒 Amazon Clone",
-        link: "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
-        pra: "Amazon Clone is a simple web app made with JavaScript. It lets users view products, add them to a cart, and see the total. It’s a good project to practice basic JavaScript and web skills.",
-    },
-    {
-        title: "🐍 Game in Python",
-        link: "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
-        pra: "Word Guessing Game in Python is a fun terminal game where players guess letters to find the hidden word.",
-    },
-    {
-        title: "🐍 HTML/CSS Quiz in Python",
-        link: "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
-        pra: "HTML/CSS Quiz in Python is a simple quiz app that tests knowledge of HTML and CSS. It’s built using Python and runs in the terminal, asking multiple-choice questions and showing the final score at the end.",
-    },
-    {
-        title: "⚛️ /First React/",
-        link: "https://github.com/FakhirAhmedKhan/First-React-Code/tree/main/First%20React",
-        pra: "To set up React for the first time, install Node.js and npm. Then, open a terminal and run npx create-react-app my-app to create a new React project. Go into the project folder using cd my-app and start the app with npm start. This will open your React app in the browser, ready for development.",
-    },
-    {
-        title: "⚛️ Calculator-in-React",
-        link: "https://calculator-in-react-ten.vercel.app/",
-        pra: "Calculator-in-React is a simple app built with React that performs basic math operations. It uses components and state to update results instantly. Great for beginners learning React.",
-    },
-    {
-        title: "🔳 QR Code Generator",
-        link: "https://qr-generator-lilac-beta.vercel.app/",
-        pra: "QR Code Generator is a simple tool or app that creates QR codes from text, URLs, or other data. Users enter information, and the app generates a scannable QR code image instantly.",
-    },
+    // },
+    // {
+    //     title: "🐍 Grading System in Python",
+    //     link: "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
+    //     pra: "A simple Python program that calculates student grades based on their marks. It uses conditional statements to assign grades like A, B, C, D, or F, helping users understand basic if-else logic and input handling.",
+    // },
+    // {
+    //     title: "🛒 Amazon Clone",
+    //     link: "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
+    //     pra: "Amazon Clone is a simple web app made with JavaScript. It lets users view products, add them to a cart, and see the total. It’s a good project to practice basic JavaScript and web skills.",
+    // },
+    // {
+    //     title: "🐍 Game in Python",
+    //     link: "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
+    //     pra: "Word Guessing Game in Python is a fun terminal game where players guess letters to find the hidden word.",
+    // },
+    // {
+    //     title: "🐍 HTML/CSS Quiz in Python",
+    //     link: "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
+    //     pra: "HTML/CSS Quiz in Python is a simple quiz app that tests knowledge of HTML and CSS. It’s built using Python and runs in the terminal, asking multiple-choice questions and showing the final score at the end.",
+    // },
+    // {
+    //     title: "⚛️ /First React/",
+    //     link: "https://github.com/FakhirAhmedKhan/First-React-Code/tree/main/First%20React",
+    //     pra: "To set up React for the first time, install Node.js and npm. Then, open a terminal and run npx create-react-app my-app to create a new React project. Go into the project folder using cd my-app and start the app with npm start. This will open your React app in the browser, ready for development.",
+    // },
+    // {
+    //     title: "⚛️ Calculator-in-React",
+    //     link: "https://calculator-in-react-ten.vercel.app/",
+    //     pra: "Calculator-in-React is a simple app built with React that performs basic math operations. It uses components and state to update results instantly. Great for beginners learning React.",
+    // },
+    // {
+    //     title: "🔳 QR Code Generator",
+    //     link: "https://qr-generator-lilac-beta.vercel.app/",
+    //     pra: "QR Code Generator is a simple tool or app that creates QR codes from text, URLs, or other data. Users enter information, and the app generates a scannable QR code image instantly.",
+    // },
 ];
 
 let projectHTML = "";
