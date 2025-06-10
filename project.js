@@ -39,11 +39,11 @@ const projects = [
         link: "https://text-to-speech-ruby-phi.vercel.app",
         pra: "This Text-to-Speech app converts written text into natural-sounding audio instantly. Supporting multiple languages and voices, it allows users to listen to any text on the go. Whether improving accessibility or creating audio content, this app provides a fast and reliable solution.",
     },
-    // {
-    //     title: "🔢 Calculator App",
-    //     link: "https://calculator-alpha-one-55.vercel.app/",
-    //     pra: "This Calculator App enables users to perform basic arithmetic operations such as addition,subtraction, multiplication, and division. Its intuitive design and responsive buttons make       calculations quick and easy for everyday use.",
-    // },
+    {
+        title: "🔢 Calculator App",
+        link: "https://calculator-alpha-one-55.vercel.app/",
+        pra: "This Calculator App enables users to perform basic arithmetic operations such as addition,subtraction, multiplication, and division. Its intuitive design and responsive buttons make       calculations quick and easy for everyday use.",
+    },
     {
         title: "🎮 Rock, Paper, Scissors Game",
         link: "https://rock-three-umber.vercel.app/",
@@ -93,6 +93,12 @@ const projects = [
         title: "🔳 QR Code Generator",
         link: "https://qr-generator-lilac-beta.vercel.app/",
         pra: "QR Code Generator is a simple tool or app that creates QR codes from text, URLs, or other data. Users enter information, and the app generates a scannable QR code image instantly.",
+    },
+    {
+        title: "📝 Task_Tracker",
+        link: "https://to-do-list-neon-six.vercel.app/",
+        pra: "About ToDo App ToDo App is a simple and easy- to - use task manager that helps you organize your daily tasks.You can add, edit, and delete tasks, mark them as complete, and stay on top of your goals.Whether it’s for school, work, or personal use, ToDo App keeps you focused and productive",
+
     },
 ];
 
