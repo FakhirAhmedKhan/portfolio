@@ -39,11 +39,11 @@ const projects = [
         link: "https://text-to-speech-ruby-phi.vercel.app",
         pra: "This Text-to-Speech app converts written text into natural-sounding audio instantly. Supporting multiple languages and voices, it allows users to listen to any text on the go. Whether improving accessibility or creating audio content, this app provides a fast and reliable solution.",
     },
-    {
-        title: "🔢 Calculator App",
-        link: "https://calculator-alpha-one-55.vercel.app/",
-        pra: "This Calculator App enables users to perform basic arithmetic operations such as addition,subtraction, multiplication, and division. Its intuitive design and responsive buttons make       calculations quick and easy for everyday use.",
-    },
+    // {
+    //     title: "🔢 Calculator App",
+    //     link: "https://calculator-alpha-one-55.vercel.app/",
+    //     pra: "This Calculator App enables users to perform basic arithmetic operations such as addition,subtraction, multiplication, and division. Its intuitive design and responsive buttons make       calculations quick and easy for everyday use.",
+    // },
     {
         title: "🎮 Rock, Paper, Scissors Game",
         link: "https://rock-three-umber.vercel.app/",
