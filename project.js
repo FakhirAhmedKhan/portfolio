@@ -40,11 +40,6 @@ const projects = [
         pra: "This Text-to-Speech app converts written text into natural-sounding audio instantly. Supporting multiple languages and voices, it allows users to listen to any text on the go. Whether improving accessibility or creating audio content, this app provides a fast and reliable solution.",
     },
     {
-        title: "🔢 Calculator App",
-        link: "https://calculator-alpha-one-55.vercel.app/",
-        pra: "This Calculator App enables users to perform basic arithmetic operations such as addition,subtraction, multiplication, and division. Its intuitive design and responsive buttons make       calculations quick and easy for everyday use.",
-    },
-    {
         title: "🎮 Rock, Paper, Scissors Game",
         link: "https://rock-three-umber.vercel.app/",
         pra: "The classic Rock, Paper, Scissors game allows players to challenge friends or test their luck against the computer. With instant feedback on choices, it's a fun and engaging way to practice quick decision-making.",
