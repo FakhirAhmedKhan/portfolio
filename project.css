@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #222;
+  background-color: #1e3a8a;
   font-family: "Arial", sans-serif;
   color: #fdfdfd;
 }
@@ -32,7 +32,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   transition: box-shadow 0.3s ease;
 }
 
@@ -150,11 +150,11 @@ h1 {
 }
 
 footer {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   padding: 40px 20px;
   text-align: center;
   color: #ddd;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); */
 }
 
 footer h3 {
