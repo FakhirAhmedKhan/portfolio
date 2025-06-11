@@ -274,3 +274,66 @@ nav ul li a:hover {
     font-size: var(--font-size-nav-link-mobile);
   }
 }
+
+/* Extra mobile responsiveness */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 0.2rem;
+    border-radius: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  nav ul li a {
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+    margin: 2px 0;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    padding: 1.2rem 0.2rem;
+    gap: 1rem;
+  }
+
+  .rightSection img {
+    width: 90vw;
+    max-width: 320px;
+    padding: 0.5rem;
+  }
+
+  .intro {
+    padding: 0.5rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .auto-scroll-wrapper {
+    padding: 0.5rem 0;
+  }
+
+  .auto-scroll ul {
+    gap: 0.5rem;
+  }
+
+  .auto-scroll li {
+    width: 60px;
+    height: 60px;
+  }
+}

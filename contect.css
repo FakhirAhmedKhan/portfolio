@@ -58,3 +58,25 @@ body {
     margin-right: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 1rem 0.2rem;
+    max-width: 98vw;
+  }
+  .contact input,
+  .contact textarea {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+  .contact button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+  .social a {
+    font-size: 1rem;
+    margin: 0 4px;
+  }
+}
