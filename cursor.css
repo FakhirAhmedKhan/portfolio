@@ -1,37 +1,38 @@
-body, button, a, input, textarea {
+body,
+button,
+a,
+input,
+textarea {
   cursor: url("./assets/cursor.cur"), pointer;
-}
-
-.cursor-effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  background: rgba(255,215,0,0.1);
-  box-shadow: 0 0 16px 2px #ffd70044;
-  transition: transform 0.13s cubic-bezier(0.4,2,0.6,1), background 0.2s, box-shadow 0.2s;
-  mix-blend-mode: difference;
-  will-change: transform, background, box-shadow;
-}
-
-.cursor-effect.active {
-  transform: scale(1.5);
-  background: rgba(255,215,0,0.22);
 }
 
 .popper-particle {
   position: fixed;
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
-  opacity: 0.92;
-  will-change: transform, opacity;
-  filter: blur(0.5px) brightness(1.1);
-  transition: opacity 0.2s;
+  opacity: 0.38;
+  will-change: transform, opacity, filter;
+  filter: blur(6px) brightness(1.2) grayscale(0.2);
+  background: linear-gradient(120deg, #fff 60%, #ffd700 100%);
+  box-shadow: 0 0 32px 8px #fffbe6, 0 0 64px 16px #ffd70044;
+  transition: opacity 0.5s, filter 0.5s;
+  animation: smoke-fade 1.2s linear forwards;
+}
+
+@keyframes smoke-fade {
+  0% {
+    opacity: 0.38;
+    filter: blur(6px) brightness(1.2) grayscale(0.2);
+  }
+  60% {
+    opacity: 0.22;
+    filter: blur(10px) brightness(1.1) grayscale(0.3);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(18px) brightness(0.9) grayscale(0.5);
+  }
 }

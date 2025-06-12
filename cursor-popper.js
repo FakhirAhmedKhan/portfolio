@@ -11,6 +11,7 @@
     mouseY = e.clientY;
     cursor.style.left = (mouseX - 16) + 'px';
     cursor.style.top = (mouseY - 16) + 'px';
+    activatePopper();
   });
 
   // Efficient particle creation
@@ -36,7 +37,18 @@
     setTimeout(() => p.remove(), 800);
   }
 
+  let popperActive = false;
+  let hideTimeout;
+  function activatePopper() {
+    popperActive = true;
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      popperActive = false;
+    }, 700); // Slowly stop after 700ms of no movement
+  }
+
   setInterval(() => {
+    if (!popperActive) return;
     for (let i = 0; i < 2; i++) createParticle(mouseX, mouseY);
   }, 60);
 })();
