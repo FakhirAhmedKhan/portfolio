@@ -1,0 +1,37 @@
+body, button, a, input, textarea {
+  cursor: url("./assets/cursor.cur"), pointer;
+}
+
+.cursor-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: rgba(255,215,0,0.1);
+  box-shadow: 0 0 16px 2px #ffd70044;
+  transition: transform 0.13s cubic-bezier(0.4,2,0.6,1), background 0.2s, box-shadow 0.2s;
+  mix-blend-mode: difference;
+  will-change: transform, background, box-shadow;
+}
+
+.cursor-effect.active {
+  transform: scale(1.5);
+  background: rgba(255,215,0,0.22);
+}
+
+.popper-particle {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0.92;
+  will-change: transform, opacity;
+  filter: blur(0.5px) brightness(1.1);
+  transition: opacity 0.2s;
+}
