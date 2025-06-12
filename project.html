@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
     <link rel="stylesheet" href="./home.css" />
     <link rel="stylesheet" href="./project.css" />
     <link rel="icon" type="image/png" href="./assets/faveicon.png" />
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-</head>
-
-<body>
+    <script
+      src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"
+      defer
+    ></script>
+    <script src="./main.js" defer></script>
+    <script src="./project.js" defer></script>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="left">
-                <span id="proText"></span>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./Blogs.html">Blogs</a></li>
-                    <li><a href="./project.html" aria-current="page">Projects</a></li>
-                    <li><a href="./contect.html">Contact</a></li>
-                </ul>
-            </div>
+      <nav>
+        <div class="left">
+          <span id="navText"></span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <div class="right">
+          <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./Blogs.html">Blogs</a></li>
+            <li><a href="./project.html" aria-current="page">Projects</a></li>
+            <li><a href="./contect.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <article class="project-card-head">
+    <main>
+      <article class="project-card-head">
         <h1>My Projects</h1>
         <p class="firstPara">
-            Welcome to my portfolio! Here, I showcase a collection of projects that highlight my skills and
-            experience as a web developer. Each project demonstrates my proficiency in HTML, CSS, JavaScript,
-            and Python, reflecting my commitment to building interactive and user-friendly web applications.
+          Welcome to my portfolio! Here, I showcase a collection of projects
+          that highlight my skills and experience as a web developer. Each
+          project demonstrates my proficiency in HTML, CSS, JavaScript, and
+          Python, reflecting my commitment to building interactive and
+          user-friendly web applications.
         </p>
-    </article>
-    <div class="gitIcon-wrapper">
-        <a class="gitIcon" href="https://github.com/FakhirAhmedKhan" target="_blank"><img class="gitIconImg"
-                src="./assets/giticon.png" alt="Git"></a>
-        <a class="gitIcon" href="https://www.linkedin.com/in/fakhirahmedkhan/" target="_blank"><img class="gitIconImg"
-                src="./assets/linkdenIcon.png" alt="img"></a>
-    </div>
-    <div class="project-showcase projects-container" loading="lazy">
-    </div>
-
+      </article>
+      <div class="gitIcon-wrapper">
+        <a
+          class="gitIcon"
+          href="https://github.com/FakhirAhmedKhan"
+          target="_blank"
+        >
+          <img class="gitIconImg" src="./assets/giticon.png" alt="GitHub" />
+        </a>
+        <a
+          class="gitIcon"
+          href="https://www.linkedin.com/in/fakhirahmedkhan/"
+          target="_blank"
+        >
+          <img
+            class="gitIconImg"
+            src="./assets/linkdenIcon.png"
+            alt="LinkedIn"
+          />
+        </a>
+      </div>
+      <div class="project-showcase projects-container" loading="lazy"></div>
+    </main>
 
     <footer>
-        <h3>Feedback</h3>
-        <p>We'd love to hear what you think!</p>
-        <div class="feedback-section">
-            <form id="feedbackForm">
-                <textarea placeholder="Your feedback..."></textarea>
-                <button type="submit" id="subBtn">Submit</button>
-            </form>
-        </div>
-        <p class="copyright">© 2025 Fakhir Ahmed Khan. All rights reserved.</p>
+      <h3>Feedback</h3>
+      <p>We'd love to hear what you think!</p>
+      <div class="feedback-section">
+        <form id="feedbackForm">
+          <textarea placeholder="Your feedback..." required></textarea>
+          <button type="submit" id="subBtn">Submit</button>
+        </form>
+      </div>
+      <p class="copyright">© 2025 Fakhir Ahmed Khan. All rights reserved.</p>
     </footer>
-
-    <script>
-        var navText = document.getElementById("proText");
-        var typed2 = new Typed(navText, {
-            strings: ["Projects"],
-            typeSpeed: 88,
-            backSpeed: 50,
-            backDelay: 10000,
-            loop: true,
-            showCursor: false,
-        });
-
-        const form = document.getElementById("feedbackForm");
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Thank you for your feedback!");
-            form.reset();
-        });
-    </script>
-
-    <script src="./project.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -167,7 +167,55 @@ nav ul li a:hover {
   font-size: var(--font-size-name);
   transition: font-size 0.3s ease;
 }
+/* Responsive Hamburger Menu */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 
+@media (max-width: 1200px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    z-index: 1001;
+  }
+  nav {
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e3a8a;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+  }
+}
 /* Responsive styles */
 @media (max-width: 1200px) {
   nav {

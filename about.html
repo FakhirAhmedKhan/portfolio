@@ -7,21 +7,27 @@
     <link rel="icon" type="image/png" href="./assets/faveicon.png" />
     <link rel="stylesheet" href="./home.css" />
     <link rel="stylesheet" href="./about.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="./main.js" defer></script>
   </head>
-
   <body>
     <header>
       <nav>
         <div class="left">
           <span id="navText"></span>
         </div>
-        <ul class="right">
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./Blogs.html">Blogs</a></li>
-          <li><a href="./project.html" aria-current="page">Projects</a></li>
-          <li><a href="./contect.html">Contact</a></li>
-        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <div class="right">
+          <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./Blogs.html">Blogs</a></li>
+            <li><a href="./project.html">Projects</a></li>
+            <li><a href="./contect.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -78,18 +84,5 @@
         </li>
       </ul>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-      const navText = document.getElementById("navText");
-      new Typed(navText, {
-        strings: ["About Me!"],
-        typeSpeed: 88,
-        backSpeed: 50,
-        backDelay: 1000,
-        loop: true,
-        showCursor: false,
-      });
-    </script>
   </body>
 </html>
