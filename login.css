@@ -23,70 +23,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-button.skip-btn {
-  padding: 0.8rem;
-  background: #116fdb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.popup-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 300px;
-  position: relative;
-}
-
-.popup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-.skip-btn {
-  margin-top: 10px;
-  background-color: 116fdb;
-  color: #007bff;
-  border: none;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.skip-btn:hover {
-  color: #0056b3;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 .tabs {
   display: flex;
   justify-content: space-around;
@@ -111,7 +47,6 @@ input[type="radio"] {
 #signupTab:checked ~ .tabs label[for="signupTab"] {
   border-bottom: 2px solid #4a90e2;
   color: #4a90e2;
-  /* border: none; */
 }
 
 .form {
@@ -135,7 +70,6 @@ input[type="radio"] {
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
-  /* background-color: #0056b3; */
 }
 
 .input-group input {
@@ -151,7 +85,8 @@ input[type="radio"] {
   border-color: #4a90e2;
 }
 
-button {
+button,
+button.skip-btn {
   padding: 0.8rem;
   background: #116fdb;
   color: white;
@@ -159,8 +94,22 @@ button {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
 }
 
-button:hover {
+button:hover,
+button.skip-btn:hover {
   background: #357abd;
+}
+
+.hidden {
+  display: none;
+}
+.skip-notice {
+  font-size: 1.2rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Montserrat";
 }

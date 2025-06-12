@@ -14,6 +14,9 @@
 
   <body>
     <div class="container">
+      <p class="skip-notice">
+        Click the Skip button to bypass login or signup.
+      </p>
       <!-- Tabs Control -->
       <input type="radio" id="loginTab" name="tab" checked />
       <input type="radio" id="signupTab" name="tab" />
@@ -24,7 +27,6 @@
       </div>
 
       <!-- Sign Up Form -->
-
       <form class="form signup">
         <div class="input-group">
           <i class="fas fa-user"></i>
@@ -40,15 +42,15 @@
       <!-- Login Form -->
       <form class="form login">
         <div class="input-group">
-          <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" required />
-        </div>
-        <div class="input-group">
           <i class="fas fa-user"></i>
           <input type="text" placeholder="Username" required />
         </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required />
+        </div>
         <button type="submit">Login</button>
-        <button id="skipBtn" class="skip-btn">Skip Login</button>
+        <button id="skipBtn" class="skip-btn" type="button">Skip Login</button>
       </form>
     </div>
     <script>
@@ -59,34 +61,28 @@
       // SIGN UP
       signupForm.addEventListener("submit", function (e) {
         e.preventDefault();
-
         const username = signupForm.querySelector('input[type="text"]').value;
         const password = signupForm.querySelector(
           'input[type="password"]'
         ).value;
-
-        const user = { username, password }; // Save user in localStorage
+        const user = { username, password };
         localStorage.setItem("user", JSON.stringify(user));
-
         alert("Signup successful! Please login.");
-        document.getElementById("loginTab").checked = true; // Switch to login tab
+        document.getElementById("loginTab").checked = true;
       });
+
       // LOGIN
       loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
-
         const username = loginForm.querySelector('input[type="text"]').value;
         const password = loginForm.querySelector(
           'input[type="password"]'
         ).value;
-
         const savedUser = JSON.parse(localStorage.getItem("user"));
-
         if (!savedUser) {
           alert("No account found. Please sign up first.");
           return;
         }
-
         if (
           username === savedUser.username &&
           password === savedUser.password
@@ -97,9 +93,11 @@
           alert("Invalid username or password");
         }
       });
+
+      // SKIP LOGIN
       const skipBtn = document.getElementById("skipBtn");
       skipBtn.addEventListener("click", () => {
-        window.location.href = "home.html"; // ⏩ Directly go to home
+        window.location.href = "home.html";
       });
     </script>
   </body>

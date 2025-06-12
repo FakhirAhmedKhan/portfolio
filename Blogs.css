@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -22,15 +23,7 @@ body {
   justify-content: center;
 }
 
-p {
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  color: #c2c2c2;
-  line-height: 1.6;
-  padding: 0 20px;
-}
-
+/* Typography */
 h1 {
   font-size: 4rem;
   color: #858484;
@@ -43,6 +36,16 @@ h1 {
   padding-bottom: 25px;
 }
 
+p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: #c2c2c2;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Project showcase */
 .project-showcase {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -75,6 +78,8 @@ h1 {
   color: #c9b1b1;
   margin-bottom: 15px;
 }
+
+/* Footer */
 footer {
   padding: 40px 20px;
   text-align: center;
@@ -93,6 +98,13 @@ footer p {
   color: #ccc;
 }
 
+footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Feedback section */
 .feedback-section {
   max-width: 500px;
   margin: 0 auto 20px;
@@ -121,6 +133,8 @@ footer p {
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
+/* Miscellaneous */
 .h3 {
   margin-top: 50px;
   text-align: center;
@@ -129,6 +143,7 @@ footer p {
   margin-bottom: 10px;
   transition: color 0.3s, text-shadow 0.3s;
 }
+
 .h3:hover {
   color: #ffb300;
   text-decoration: underline;
@@ -156,12 +171,7 @@ footer p {
   }
 }
 
-footer .copyright {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
+/* Responsive styles */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.8rem;

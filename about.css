@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +10,8 @@ body {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
   color: #fff;
   line-height: 1.6;
-  overflow-x: hidden;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -45,16 +46,10 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.skillLink {
-  text-decoration: none;
-  color: #28a745;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.skillLink:hover {
+h2 {
+  font-size: 2.2rem;
   color: #ffd700;
-  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -63,12 +58,6 @@ p {
   margin: 0 auto 24px auto;
   color: #e0e0e0;
   line-height: 1.7;
-}
-
-h2 {
-  font-size: 2.2rem;
-  color: #ffd700;
-  margin-bottom: 1rem;
 }
 
 .skills {
@@ -102,6 +91,19 @@ h2 {
   border-color: #70ff91;
 }
 
+.skillLink {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.skillLink:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Responsive styles */
 @media (max-width: 900px) {
   .container {
     padding: 18px 4vw 12px 4vw;

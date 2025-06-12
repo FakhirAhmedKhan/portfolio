@@ -178,6 +178,12 @@ footer p {
   color: #ccc;
 }
 
+footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
 .feedback-section {
   max-width: 500px;
   margin: 0 auto 20px;
@@ -206,6 +212,7 @@ footer p {
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
 .h3 {
   margin-top: 50px;
   text-align: center;
@@ -214,6 +221,7 @@ footer p {
   margin-bottom: 10px;
   transition: color 0.3s, text-shadow 0.3s;
 }
+
 .h3:hover {
   color: #ffb300;
   text-decoration: underline;
@@ -239,12 +247,6 @@ footer p {
   100% {
     transform: scale(1);
   }
-}
-
-footer .copyright {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #777;
 }
 
 @media (max-width: 900px) {

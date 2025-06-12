@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +47,7 @@ nav ul li a:hover {
   color: rgb(174, 174, 236);
   font-size: 1.6rem;
 }
+
 #Blog,
 #navText,
 #proText,
@@ -76,7 +78,13 @@ nav ul li a:hover {
 .name {
   font-size: 2.5rem;
   font-weight: bold;
+  transition: font-size 0.3s ease;
 }
+
+.highlight {
+  color: #032346;
+}
+
 .highlight:hover {
   color: #ffd700;
   text-decoration: underline;
@@ -84,9 +92,6 @@ nav ul li a:hover {
   text-underline-offset: 4px;
   transition: color 0.3s ease, text-decoration 0.3s ease;
   cursor: pointer;
-}
-.highlight {
-  color: #032346;
 }
 
 .subtitle {
@@ -151,7 +156,6 @@ nav ul li a:hover {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
@@ -170,10 +174,6 @@ nav ul li a:hover {
   --right-section-img-width-mobile: 70%;
 }
 
-.name {
-  font-size: var(--font-size-name);
-  transition: font-size 0.3s ease;
-}
 /* Responsive Hamburger Menu */
 .nav-toggle {
   display: none;
@@ -324,22 +324,18 @@ nav ul li a:hover {
   .name {
     font-size: var(--font-size-name-mobile);
   }
-
   .subtitle {
     font-size: var(--font-size-subtitle-mobile);
   }
-
   .role {
     font-size: var(--font-size-role-mobile);
   }
-
   nav ul li a {
     padding: var(--nav-link-padding);
     font-size: var(--font-size-nav-link-mobile);
   }
 }
 
-/* Extra mobile responsiveness */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -347,55 +343,44 @@ nav ul li a:hover {
     padding: 0.5rem 0.2rem;
     border-radius: 0;
   }
-
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
   }
-
   nav ul li a {
     padding: 0.7rem 1rem;
     font-size: 1.1rem;
     margin: 2px 0;
   }
-
   .firstSection {
     flex-direction: column;
     padding: 1.2rem 0.2rem;
     gap: 1rem;
   }
-
   .rightSection img {
     width: 90vw;
     max-width: 320px;
     padding: 0.5rem;
   }
-
   .intro {
     padding: 0.5rem;
   }
-
   .name {
     font-size: 1.5rem;
   }
-
   .subtitle {
     font-size: 1rem;
   }
-
   .role {
     font-size: 1.1rem;
   }
-
   .auto-scroll-wrapper {
     padding: 0.5rem 0;
   }
-
   .auto-scroll ul {
     gap: 0.5rem;
   }
-
   .auto-scroll li {
     width: 60px;
     height: 60px;
