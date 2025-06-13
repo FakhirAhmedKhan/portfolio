@@ -21,7 +21,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(240, 38%, 56%);
+  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
 }
 
 nav ul {
@@ -209,6 +209,7 @@ nav ul li a:hover {
     height: auto;
     padding: var(--nav-padding-mobile);
     transition: padding 0.3s ease;
+    background: none;
   }
   .nav-links {
     display: none;
