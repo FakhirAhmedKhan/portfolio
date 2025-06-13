@@ -1,13 +1,12 @@
 /* Reset and base styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
 }
-
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
   color: #fff;
   user-select: none;
@@ -49,13 +48,24 @@ nav ul li a:hover {
 }
 
 #Blog,
-#navText,
 #proText,
 #conText,
 #aboutText {
   margin: 20px;
   font-size: 2rem;
   font-weight: bold;
+}
+
+#navText {
+  display: inline-block;
+  min-width: 120px; /* Reserve space for animation */
+  max-width: 100vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px;
 }
 
 .firstSection {
@@ -101,7 +111,6 @@ nav ul li a:hover {
 }
 
 .role {
-  font-family: "Tahoma";
   font-size: 2rem;
   font-weight: bold;
   color: #50c06a;
@@ -283,6 +292,17 @@ nav ul li a:hover {
     text-align: center;
     margin: 0.5rem 0;
   }
+  #navText {
+    display: inline-block;
+    min-width: 120px; /* Reserve space for animation */
+    max-width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px;
+  }
   .name {
     font-size: var(--font-size-name-mobile);
   }
@@ -352,6 +372,13 @@ nav ul li a:hover {
     padding: 0.7rem 1rem;
     font-size: 1.1rem;
     margin: 2px 0;
+  }
+  #navText {
+    min-width: 90px; /* Smaller but still enough for animation */
+    font-size: 1.2rem;
+    margin: 8px 0 8px 8px;
+    max-width: 70vw;
+    text-align: left;
   }
   .firstSection {
     flex-direction: column;

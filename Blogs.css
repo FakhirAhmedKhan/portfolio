@@ -1,8 +1,10 @@
 /* Reset and base styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 body {
@@ -73,7 +75,6 @@ p {
 }
 
 .project-card h2 {
-  font-family: inherit;
   font-size: 1.8rem;
   color: #c9b1b1;
   margin-bottom: 15px;

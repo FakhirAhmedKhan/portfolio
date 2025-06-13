@@ -1,12 +1,13 @@
 /* Reset and base styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
   color: #fff;
   line-height: 1.6;

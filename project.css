@@ -1,12 +1,13 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 body {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
-  font-family: "Segoe UI", Arial, sans-serif;
   color: #fdfdfd;
 }
 
@@ -84,7 +85,6 @@ h1 {
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
   color: #333;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-card-head h1 {
