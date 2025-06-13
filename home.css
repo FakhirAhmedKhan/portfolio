@@ -21,7 +21,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+  background: linear-gradient(135deg, #2c3e50, #34404c);
 }
 
 nav ul {
