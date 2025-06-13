@@ -52,7 +52,7 @@ let blogsHTML = "";
 
 Blogs.forEach((blog) => {
     blogsHTML += `
-    <article class="project-card">
+    <article class="project-card" loading="lazy">
       <h2>${blog.title}</h2>
       ${blog.description}
     </article>
