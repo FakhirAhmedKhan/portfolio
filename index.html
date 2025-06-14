@@ -55,6 +55,17 @@
       </form>
     </div>
     <script>
+      // Encryption and decryption functions
+      const secretKey = "mySecretKey123"; // Replace with a securely generated key
+
+      function encrypt(text) {
+        return btoa(unescape(encodeURIComponent(text))); // Simple Base64 encoding
+      }
+
+      function decrypt(text) {
+        return decodeURIComponent(escape(atob(text))); // Simple Base64 decoding
+      }
+
       // Get the login and signup forms
       const loginForm = document.querySelector(".form.login");
       const signupForm = document.querySelector(".form.signup");
@@ -66,7 +77,8 @@
         const password = signupForm.querySelector(
           'input[type="password"]'
         ).value;
-        const user = { username, password };
+        const encryptedPassword = encrypt(password);
+        const user = { username, password: encryptedPassword };
         localStorage.setItem("user", JSON.stringify(user));
         alert("Signup successful! Please login.");
         document.getElementById("loginTab").checked = true;
@@ -84,9 +96,10 @@
           alert("No account found. Please sign up first.");
           return;
         }
+        const decryptedPassword = decrypt(savedUser.password);
         if (
           username === savedUser.username &&
-          password === savedUser.password
+          password === decryptedPassword
         ) {
           alert("Login successful!");
           window.location.href = "home.html";
