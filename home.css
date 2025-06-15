@@ -426,7 +426,24 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
+  .nav-toggle {
+   display: grid;
+    position: absolute; 
+    right: 0rem;
+    top: 0rem;
+    z-index: 1001;
+    color: #fff;
+    transition: color 0.3s ease;
+    margin: -10px;
+    padding: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: end;
+    align-items: end; */
+  }
+
   nav {
     flex-direction: column;
     height: auto;
