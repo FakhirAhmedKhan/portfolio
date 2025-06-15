@@ -103,9 +103,6 @@ button.skip-btn:hover {
   background: #357abd;
 }
 
-.hidden {
-  display: none;
-}
 .skip-notice {
   font-size: 1.2rem;
   color: #aaa;

@@ -14,51 +14,77 @@ body {
   margin: 0 auto;
 }
 
-nav {
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1.5px;
+  border-radius: 30px;
+  background: linear-gradient(
+    270deg,
+    #8ec5fc,
+    #e0c3fc,
+    #a1c4fd,
+    #c2e9fb,
+    #8ec5fc,
+    #838383,
+    #2c3e50
+  );
+  background-size: 400% 400%;
+  animation: rgbBorder 6s ease infinite;
+  width: fit-content;
   margin: 22px auto;
-  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes rgbBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav {
+  border-radius: 30px;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(135deg, #2c3e50, #34404c);
+  padding: 0 2rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  padding: 1rem 2.5rem;
-  margin: 6px;
-  font-size: 1.6rem;
+  padding: 1.75rem 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
+  gap: 2.5rem;
   font-weight: 600;
-  transition: 0.3s ease;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-shadow: 5px #000;
-  font-weight: bold;
   color: rgb(174, 174, 236);
-  font-size: 1.6rem;
-}
-
-#Blog,
-#proText,
-#conText,
-#aboutText {
-  margin: 20px;
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 #navText {
   display: inline-block;
-  min-width: 120px; /* Reserve space for animation */
+  min-width: 140px; /* Reserve space for animation */
   max-width: 100vw;
   overflow: hidden;
   white-space: nowrap;
@@ -195,12 +221,31 @@ nav ul li a:hover {
 }
 
 @media (max-width: 1200px) {
+  .nav-wrapper {
+    background: none;
+    animation: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .nav-toggle {
-    display: block;
+    display: grid;
     position: absolute;
-    right: 2rem;
+    right: -16rem;
     top: 1.2rem;
     z-index: 1001;
+    color: #fff;
+    transition: color 0.3s ease;
+    margin: -10px;
+    padding: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: end;
+    align-items: end;
   }
   nav {
     position: relative;
@@ -210,6 +255,7 @@ nav ul li a:hover {
     padding: var(--nav-padding-mobile);
     transition: padding 0.3s ease;
     background: none;
+    box-shadow: none;
   }
   .nav-links {
     display: none;
@@ -284,14 +330,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  #navText,
-  #proText,
-  #conText,
-  #aboutText {
-    font-size: var(--font-size-nav-text-mobile);
-    text-align: center;
-    margin: 0.5rem 0;
   }
   #navText {
     display: inline-block;
