@@ -1,11 +1,13 @@
+/* General styles for all elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  user-select: none;
+  user-select: none; /* Prevents text selection */
 }
 
+/* Body styles to center the container */
 body {
   display: flex;
   justify-content: center;
@@ -14,21 +16,24 @@ body {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
 }
 
+/* Main container for the form */
 .container {
   background: #fff;
   padding: 2rem;
   border-radius: 16px;
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Tabs for switching between Login and Sign Up */
 .tabs {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.5rem;
 }
 
+/* Styling for the tab labels */
 .tabs label {
   flex: 1;
   text-align: center;
@@ -36,34 +41,40 @@ body {
   cursor: pointer;
   font-weight: 500;
   border-bottom: 2px solid transparent;
-  transition: 0.3s;
+  transition: all 0.3s; /* Smooth transition for color and border */
 }
 
-input[type="radio"] {
+/* Hide the radio buttons used for tab control */
+.tab-control {
   display: none;
 }
 
+/* Style the active tab label */
 #loginTab:checked ~ .tabs label[for="loginTab"],
 #signupTab:checked ~ .tabs label[for="signupTab"] {
-  border-bottom: 2px solid #4a90e2;
+  border-bottom-color: #4a90e2;
   color: #4a90e2;
 }
 
+/* General form styling */
 .form {
-  display: none;
+  display: none; /* Hide forms by default */
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Show the active form based on the checked tab */
 #loginTab:checked ~ .form.login,
 #signupTab:checked ~ .form.signup {
   display: flex;
 }
 
+/* Input group containing icon and input field */
 .input-group {
   position: relative;
 }
 
+/* Icon styling within the input group */
 .input-group i {
   position: absolute;
   left: 12px;
@@ -72,21 +83,24 @@ input[type="radio"] {
   color: #aaa;
 }
 
+/* Input field styling */
 .input-group input {
   width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  padding: 0.75rem 1rem 0.75rem 2.5rem; /* Padding to make space for the icon */
   border: 2px solid #eee;
   border-radius: 8px;
   font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
+/* Input field focus style */
 .input-group input:focus {
   outline: none;
   border-color: #4a90e2;
 }
 
-button,
-button.skip-btn {
+/* General button styling */
+button {
   padding: 0.8rem;
   background: #116fdb;
   color: white;
@@ -95,17 +109,18 @@ button.skip-btn {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
-button:hover,
-button.skip-btn:hover {
+/* Button hover effect */
+button:hover {
   background: #357abd;
 }
 
+/* Notice for skipping login */
 .skip-notice {
-  font-size: 1.2rem;
+  font-size: 0.9rem; /* Adjusted for better fit */
   color: #aaa;
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem; /* Added margin for spacing */
 }

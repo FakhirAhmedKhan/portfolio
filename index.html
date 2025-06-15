@@ -4,30 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login / Sign Up</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="cursor.css" />
-    <link rel="icon" type="image/png" href="./assets/faveicon.png" />
+    <link rel="stylesheet" href="./login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="icon" type="image/png" href="./assets/faveicon.png" />
   </head>
-
   <body>
     <div class="container">
       <p class="skip-notice">
         Click the Skip button to bypass login or signup.
       </p>
-      <!-- Tabs Control -->
-      <input type="radio" id="loginTab" name="tab" checked />
-      <input type="radio" id="signupTab" name="tab" />
+
+      <input
+        type="radio"
+        id="loginTab"
+        name="tab"
+        class="tab-control"
+        checked
+      />
+      <input type="radio" id="signupTab" name="tab" class="tab-control" />
 
       <div class="tabs">
         <label for="loginTab">Login</label>
         <label for="signupTab">Sign Up</label>
       </div>
 
-      <!-- Sign Up Form -->
       <form class="form signup">
         <div class="input-group">
           <i class="fas fa-user"></i>
@@ -40,7 +43,6 @@
         <button type="submit">Sign Up</button>
       </form>
 
-      <!-- Login Form -->
       <form class="form login">
         <div class="input-group">
           <i class="fas fa-user"></i>
@@ -51,55 +53,10 @@
           <input type="password" placeholder="Password" required />
         </div>
         <button type="submit">Login</button>
-        <button id="skipBtn" class="skip-btn" type="button">Skip Login</button>
+        <button id="skipBtn" class="skip-btn" type="button">Skip</button>
       </form>
     </div>
-    <script>
-      // Get the login and signup forms
-      const loginForm = document.querySelector(".form.login");
-      const signupForm = document.querySelector(".form.signup");
 
-      // SIGN UP
-      signupForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const username = signupForm.querySelector('input[type="text"]').value;
-        const password = signupForm.querySelector(
-          'input[type="password"]'
-        ).value;
-        const user = { username, password };
-        localStorage.setItem("user", JSON.stringify(user));
-        alert("Signup successful! Please login.");
-        document.getElementById("loginTab").checked = true;
-      });
-
-      // LOGIN
-      loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const username = loginForm.querySelector('input[type="text"]').value;
-        const password = loginForm.querySelector(
-          'input[type="password"]'
-        ).value;
-        const savedUser = JSON.parse(localStorage.getItem("user"));
-        if (!savedUser) {
-          alert("No account found. Please sign up first.");
-          return;
-        }
-        if (
-          username === savedUser.username &&
-          password === savedUser.password
-        ) {
-          alert("Login successful!");
-          window.location.href = "home.html";
-        } else {
-          alert("Invalid username or password");
-        }
-      });
-
-      // SKIP LOGIN
-      const skipBtn = document.getElementById("skipBtn");
-      skipBtn.addEventListener("click", () => {
-        window.location.href = "home.html";
-      });
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>

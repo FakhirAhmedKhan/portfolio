@@ -103,3 +103,65 @@ function redirectToGoogleForm() {
         for (let i = 0; i < 2; i++) createParticle(mouseX, mouseY);
     }, 60);
 })();
+// Wait for the DOM to be fully loaded before running the script
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the login and signup forms
+    const loginForm = document.querySelector(".form.login");
+    const signupForm = document.querySelector(".form.signup");
+    const skipBtn = document.getElementById("skipBtn");
+
+    /**
+     * Handles the sign-up process.
+     * @param {Event} e - The form submission event.
+     */
+    signupForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent the form from submitting the default way
+
+        // Get username and password from the signup form
+        const username = signupForm.querySelector('input[type="text"]').value;
+        const password = signupForm.querySelector('input[type="password"]').value;
+
+        // Create a user object and store it in localStorage
+        const user = { username, password };
+        localStorage.setItem("user", JSON.stringify(user));
+
+        alert("Signup successful! Please login.");
+        document.getElementById("loginTab").checked = true; // Switch to the login tab
+    });
+
+    /**
+     * Handles the login process.
+     * @param {Event} e - The form submission event.
+     */
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent the form from submitting the default way
+
+        // Get username and password from the login form
+        const username = loginForm.querySelector('input[type="text"]').value;
+        const password = loginForm.querySelector('input[type="password"]').value;
+
+        // Retrieve the stored user data from localStorage
+        const savedUser = JSON.parse(localStorage.getItem("user"));
+
+        // Check if a user is registered
+        if (!savedUser) {
+            alert("No account found. Please sign up first.");
+            return;
+        }
+
+        // Check if the entered credentials match the stored credentials
+        if (username === savedUser.username && password === savedUser.password) {
+            alert("Login successful!");
+            window.location.href = "home.html"; // Redirect to the home page
+        } else {
+            alert("Invalid username or password");
+        }
+    });
+
+    /**
+     * Handles the skip login functionality.
+     */
+    skipBtn.addEventListener("click", () => {
+        window.location.href = "home.html"; // Redirect to the home page
+    });
+});
