@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navText) {
         new Typed(navText, {
             strings: ["Portfolio"],
-            typeSpeed: 500,
+            typeSpeed: 150,
             loop: false,
             showCursor: false,
         });
