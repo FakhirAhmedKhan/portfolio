@@ -8,6 +8,7 @@
 
 body {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+  min-height: 100vh;
 }
 
 .contact {

@@ -5,14 +5,6 @@
   user-select: none;
 }
 
-body,
-button,
-a,
-input,
-textarea {
-  cursor: url("./assets/cursor.cur"), pointer;
-}
-
 .popper-particle {
   position: fixed;
   width: 22px;
