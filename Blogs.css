@@ -55,6 +55,7 @@ p {
   gap: 25px;
   width: 100%;
   padding: 0 1rem;
+  min-height: 320px; /* Reserve space for dynamic content */
 }
 
 .project-card {
@@ -67,6 +68,7 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-height: 220px;
 }
 
 .project-card:hover,
@@ -155,24 +157,6 @@ footer .copyright {
   animation: h3-bounce 0.6s;
 }
 
-@keyframes h3-bounce {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.15);
-  }
-  50% {
-    transform: scale(0.95);
-  }
-  70% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   h1 {
@@ -202,11 +186,13 @@ footer .copyright {
     grid-template-columns: 1fr;
     gap: 8px;
     padding: 0 0.2rem;
+    min-height: 120px;
   }
 
   .project-card {
     padding: 10px 6px;
     border-radius: 8px;
+    min-height: 120px;
   }
 
   .project-card h2 {
@@ -222,5 +208,9 @@ footer .copyright {
   h1 {
     font-size: 1.3rem;
     padding-bottom: 8px;
+  }
+
+  .project-card img {
+    height: 100px;
   }
 }

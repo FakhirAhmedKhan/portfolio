@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
     <script src="./main.js" defer></script>
   </head>
+
   <body>
     <header>
       <div class="nav-wrapper">
@@ -38,10 +39,22 @@
         <h2>Contact Me</h2>
         <p>Let's work together or just say hi!</p>
         <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
           <textarea
-            name="message"
+            id="message"
             placeholder="Your Message"
             rows="5"
             required

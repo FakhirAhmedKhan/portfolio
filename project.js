@@ -95,11 +95,11 @@ let projectHTML = "";
 
 projects.forEach((project) => {
     projectHTML += `
-    <article class="project-card" loading="lazy">
+    <span class="project-card" loading="lazy">
       <h2>${project.title}</h2>
       <a href="${project.link}" target="_blank" ">View Project</a>
       <p>${project.pra}</p>
-    </article>
+    </span>
   `;
 });
 
