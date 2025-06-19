@@ -121,4 +121,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Made with ❤️ | Last Updated: June 2024
+Made with ❤️ | Last Updated: June 2025
