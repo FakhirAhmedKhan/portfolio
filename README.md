@@ -11,15 +11,16 @@ A modern, interactive portfolio website built with HTML, CSS, and JavaScript. Th
   - Home: Introduction and quick overview
   - About: Detailed information about skills and experience
   - Projects: Showcase of development work
-  - Blogs: Collection of written content
   - Contact: Ways to get in touch
-- **Performance Optimized**: Clean, minified code with improved loading times
+- **Performance Optimized**: Clean, modular code with improved loading times
+- **OOP JavaScript**: Core functionality is written in a modern, object-oriented style for maintainability and scalability
+- **Clean CSS**: Stylesheets are optimized and free of unused code for faster rendering
 
 ## 🛠️ Technologies Used
 
 - HTML5 (Semantic markup)
 - CSS3 (Modern features: Flexbox, Grid, Animations)
-- JavaScript (ES6+, optimized for performance)
+- JavaScript (ES6+, OOP, optimized for performance)
 - Custom particle effects system
 - Responsive design principles
 
@@ -28,7 +29,7 @@ A modern, interactive portfolio website built with HTML, CSS, and JavaScript. Th
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/FakhirAhmedKhan/portfolio.git]
+git clone https://github.com/FakhirAhmedKhan/portfolio.git
 ```
 
 2. Open the project directory:
@@ -44,27 +45,16 @@ cd portfolio
 ```
 portfolio/
 │
-├── index.html          # Main entry point
-├── home.html          # Home page
-├── about.html         # About page
-├── project.html       # Projects showcase
-├── Blogs.html         # Blog posts
-├── contect.html       # Contact page
+├── index.html        # Home page
+├── about.html        # About page
+├── project.html      # Projects showcase
+├── contact.html      # Contact page
 │
-├── CSS/
-│   ├── home.css      # Home page styles
-│   ├── about.css     # About page styles
-│   ├── project.css   # Projects page styles
-│   ├── Blogs.css     # Blog page styles
-│   ├── contect.css   # Contact page styles
-│   ├── cursor.css    # Custom cursor and particle effects
-│   └── login.css     # Login page styles
-│
-├── JS/
-│   ├── main.js       # Core functionality
-│   ├── project.js    # Projects page interactions
-│   ├── Blogs.js      # Blog functionality
-│   └── cursor-popper.js # Optimized cursor effects
+├── home.css          # Home page styles
+├── about.css         # About page styles
+├── project.css       # Projects page styles
+├── contact.css       # Contact page styles
+├── main.js           # Core functionality (OOP, modular)
 │
 └── assets/           # Optimized images and icons
     ├── homeImg.png
@@ -96,9 +86,9 @@ portfolio/
 The project features a clean, well-documented codebase:
 
 - Organized CSS with grouped selectors and clear comments
-- Optimized JavaScript with clear documentation
+- Modular, OOP JavaScript for easy maintenance and extension
 - Easy-to-modify particle effect parameters
-- Modular structure for easy additions/modifications
+- Simple structure for easy additions/modifications
 
 ## 📱 Browser Support
 
@@ -111,7 +101,7 @@ The project features a clean, well-documented codebase:
 
 - Production-ready, minified code
 - Organized CSS with grouped, efficient selectors
-- Well-documented JavaScript with optimized functions
+- Well-documented, OOP JavaScript with optimized functions
 - Improved asset optimization for faster loading
 - Beginner-friendly code structure with helpful comments
 

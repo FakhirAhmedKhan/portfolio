@@ -35,7 +35,6 @@
 }
 
 .container {
-  /* background: linear-gradient(135deg, #1e1e1e, #2c3e50); */
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -198,24 +197,6 @@ footer .copyright {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
-}
-
-.h3 {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #ffd700;
-  margin-bottom: 10px;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.h3:hover {
-  color: #ffb300;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  text-shadow: 0 0 12px #ffd700, 0 0 24px #ffb300;
-  animation: h3-bounce 0.6s;
 }
 
 @media (max-width: 900px) {

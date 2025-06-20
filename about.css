@@ -20,28 +20,11 @@
 }
 
 h1 {
-  padding-top: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-size: 2.5rem;
   color: #ffd700;
-  text-align: center;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #ffd700 40%, #ff6a00 60%, #00c3ff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.18), 0 4px 24px #ffd70044;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
-}
-@keyframes underline-glow {
-  0% {
-    box-shadow: 0 0 8px #ffd70088;
-  }
-  100% {
-    box-shadow: 0 0 24px #00c3ffcc;
-  }
 }
 
 h2 {
