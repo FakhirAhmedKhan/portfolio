@@ -40,51 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         });
     }
-
-    // Login/Signup logic (only if forms exist)
-    const loginForm = document.querySelector('.form.login');
-    const signupForm = document.querySelector('.form.signup');
-    const skipBtn = document.getElementById('skipBtn');
-
-    if (signupForm) {
-        signupForm.addEventListener('submit', e => {
-            e.preventDefault();
-            const username = signupForm.querySelector('input[type="text"]').value;
-            const password = signupForm.querySelector('input[type="password"]').value;
-            // WARNING: Never store real passwords in localStorage in production!
-            const user = { username, password };
-            localStorage.setItem('user', JSON.stringify(user));
-            alert('Signup successful! Please login.');
-            const loginTab = document.getElementById('loginTab');
-            if (loginTab) loginTab.checked = true;
-        });
-    }
-
-    if (loginForm) {
-        loginForm.addEventListener('submit', e => {
-            e.preventDefault();
-            const username = loginForm.querySelector('input[type="text"]').value;
-            const password = loginForm.querySelector('input[type="password"]').value;
-            const savedUser = JSON.parse(localStorage.getItem('user'));
-            if (!savedUser) {
-                alert('No account found. Please sign up first.');
-                return;
-            }
-            if (username === savedUser.username && password === savedUser.password) {
-                alert('Login successful!');
-                window.location.href = 'home.html';
-            } else {
-                alert('Invalid username or password');
-            }
-        });
-    }
-
-    if (skipBtn) {
-        skipBtn.addEventListener('click', () => {
-            window.location.href = 'home.html';
-        });
-    }
-});
+}
+);
 
 // Redirect function for contact form
 function redirectToGoogleForm() {
