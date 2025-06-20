@@ -117,7 +117,7 @@ class App {
     }
     init() {
         new TypedText('element', {
-            strings: ['Web Designer', 'Web Developer', 'Content Creator'],
+            strings: ['Web Designer', 'Web Developer',],
             typeSpeed: 80,
             backDelay: 1000,
             backSpeed: 50,
