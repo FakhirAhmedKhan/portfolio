@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +8,13 @@
 
 body {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
-  color: #fdfdfd;
+  color: #fff;
+  user-select: none;
+  max-width: 1200px;
+  margin: 0 auto;
   min-height: 100vh;
 }
+
 
 .container {
   padding: 1rem;
