@@ -14,8 +14,17 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
+  height: 100%;
+}
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 .popper-particle {
   position: fixed;
   width: 22px;
