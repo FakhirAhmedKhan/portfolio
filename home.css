@@ -425,14 +425,13 @@ nav ul li a:hover {
   #navText {
     display: inline-block;
     min-width: 120px;
-    /* Reserve space for animation */
     max-width: 100vw;
     overflow: hidden;
     white-space: nowrap;
     text-align: left;
     font-size: 2rem;
     font-weight: bold;
-    margin: 20px;
+    padding: 0.5rem;
   }
 
   .name {
@@ -469,6 +468,11 @@ nav ul li a:hover {
   .firstSection > div {
     flex: 1 1 auto;
     width: 100%;
+  }
+  #navText {
+    margin: -10px;
+    padding: -10px;
+    text-align: center;
   }
 }
 @media (max-width: 1099px) {
@@ -524,6 +528,11 @@ nav ul li a:hover {
     padding: var(--nav-link-padding);
     font-size: var(--font-size-nav-link-mobile);
   }
+  #navText {
+    margin: -10px;
+    padding: -10px;
+    text-align: center;
+  }
 }
 @media (max-width: 400px) {
   body {
@@ -555,5 +564,22 @@ nav ul li a:hover {
   .rightSection img {
     width: 100%;
     max-width: 280px;
+  }
+  #navText {
+    margin: -10px;
+    padding: -10px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  #navText {
+    margin: -10px;
+    padding: -10px;
+    text-align: center;
+  }
+  .rightSection img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
   }
 }
