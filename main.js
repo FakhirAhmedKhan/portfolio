@@ -49,7 +49,7 @@ class Skills {
                 .map(
                     (skill) => `
                 <span class="project-card" loading="lazy">
-                    <a class="skill-link" href="${skill.link}" target="_blank">${skill.name}</a>
+                    <a class="skill-link" href="javascript:void(0)"  >${skill.name}</a>
                 </span>
             `
                 )
