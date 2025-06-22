@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+  background: #2c3e50;
   color: #fff;
   user-select: none;
   max-width: 1200px;
@@ -25,34 +25,34 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-.popper-particle {
+.smoke-particle {
   position: fixed;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   pointer-events: none;
-  z-index: 10000;
-  opacity: 0.38;
-  will-change: transform, opacity, filter;
-  filter: blur(6px) brightness(1.2) grayscale(0.2);
-  background: linear-gradient(120deg, #fff 60%, #ffd700 100%);
-  box-shadow: 0 0 32px 8px #fffbe6, 0 0 64px 16px #ffd70044;
-  transition: opacity 0.5s, filter 0.5s;
-  animation: smoke-fade 1.2s linear forwards;
+  border-radius: 50%;
+  z-index: 9999;
+  background: radial-gradient(
+    circle,
+    #ffffffcc 0%,
+    #cccccc88 70%,
+    transparent 100%
+  );
+  filter: blur(6px) grayscale(0.4) brightness(1.1);
+  opacity: 0.6;
+  animation: fadeSmoke 1.2s ease-out forwards;
 }
 
-@keyframes smoke-fade {
+@keyframes fadeSmoke {
   0% {
-    opacity: 0.38;
-    filter: blur(6px) brightness(1.2) grayscale(0.2);
-  }
-  60% {
-    opacity: 0.22;
-    filter: blur(10px) brightness(1.1) grayscale(0.3);
+    transform: scale(0.9);
+    opacity: 0.6;
+    filter: blur(6px);
   }
   100% {
+    transform: scale(2.2) translateY(-40px);
     opacity: 0;
-    filter: blur(18px) brightness(0.9) grayscale(0.5);
+    filter: blur(12px);
   }
 }
 
@@ -142,7 +142,6 @@ nav ul li a:hover {
   transition: color 0.3s ease;
   height: 60px;
   line-height: 60px;
-  /* same as height to center text */
 }
 
 .firstSection {

@@ -38,14 +38,9 @@ p {
   justify-content: center;
   gap: 1.25rem;
   padding: 1.5rem;
-  background: linear-gradient(
-    145deg,
-    rgba(79, 46, 145, 0.15),
-    rgba(98, 0, 234, 0.1)
-  );
   border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(98, 0, 234, 0.08);
   backdrop-filter: blur(4px);
+  margin-left: 3rem;
 }
 
 /* Skill Button Style */
@@ -58,11 +53,10 @@ p {
   font-size: 1.05rem;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #6200ea, #7b1fa2);
+  background: linear-gradient(135deg, #2c3e50, #1e1e1e);
   border-radius: 0.75rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(98, 0, 234, 0.2);
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -72,7 +66,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #7b1fa2, #bb86fc);
+  background: linear-gradient(135deg, #2c3e50, #1e1e1e);
   opacity: 0.15;
   z-index: -1;
   transition: opacity 0.3s ease;
@@ -81,10 +75,10 @@ p {
 
 .skill-link:hover,
 .skill-link:focus {
-  background: linear-gradient(135deg, #7b1fa2, #bb86fc);
+  background: linear-gradient(135deg, #1e1e1e, #2c3e50);
   transform: translateY(-3px) scale(1.05);
-  color: #1a1a1a;
-  box-shadow: 0 6px 20px rgba(98, 0, 234, 0.3);
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .skill-link:hover::before,

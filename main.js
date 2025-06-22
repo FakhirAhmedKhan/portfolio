@@ -59,63 +59,20 @@ class Skills {
 }
 
 // Cursor popper effect
-class CursorPopper {
+class SmokeTrail {
     constructor() {
-        this.cursor = document.createElement("div");
-        this.cursor.className = "cursor-effect";
-        document.body.appendChild(this.cursor);
-        this.colors = [
-            "#ffd700",
-            "#ff69b4",
-            "#00e1ff",
-            "#ffb300",
-            "#70ff91",
-            "#fff",
-        ];
-        document.addEventListener("mousemove", this.handleMouseMove.bind(this));
-        setInterval(this.spawnParticles.bind(this), 60);
+        document.addEventListener("mousemove", this.spawnSmoke.bind(this));
     }
-    handleMouseMove(e) {
-        this.mouseX = e.clientX;
-        this.mouseY = e.clientY;
-        this.cursor.style.left = this.mouseX - 16 + "px";
-        this.cursor.style.top = this.mouseY - 16 + "px";
-        this.activatePopper();
-    }
-    createParticle(x, y) {
-        const p = document.createElement("div");
-        p.className = "popper-particle";
-        p.style.left = x + "px";
-        p.style.top = y + "px";
-        p.style.background = this.colors[(Math.random() * this.colors.length) | 0];
-        p.style.transform = `scale(${0.7 + Math.random() * 0.7})`;
-        document.body.appendChild(p);
-        const angle = Math.random() * 2 * Math.PI;
-        const dist = 60 + Math.random() * 40;
-        const dx = Math.cos(angle) * dist,
-            dy = Math.sin(angle) * dist;
-        p.animate(
-            [
-                { transform: p.style.transform, opacity: 1 },
-                { transform: `translate(${dx}px,${dy}px) scale(0.2)`, opacity: 0 },
-            ],
-            {
-                duration: 700 + Math.random() * 300,
-                easing: "cubic-bezier(0.4,2,0.6,1)",
-            }
-        );
-        setTimeout(() => p.remove(), 800);
-    }
-    activatePopper() {
-        this.popperActive = true;
-        clearTimeout(this.hideTimeout);
-        this.hideTimeout = setTimeout(() => {
-            this.popperActive = false;
-        }, 700);
-    }
-    spawnParticles() {
-        if (!this.popperActive) return;
-        for (let i = 0; i < 2; i++) this.createParticle(this.mouseX, this.mouseY);
+
+    spawnSmoke(e) {
+        const smoke = document.createElement("div");
+        smoke.className = "smoke-particle";
+        smoke.style.left = `${e.clientX}px`;
+        smoke.style.top = `${e.clientY}px`;
+
+        document.body.appendChild(smoke);
+
+        setTimeout(() => smoke.remove(), 1200);
     }
 }
 
@@ -311,9 +268,9 @@ class App {
                 link: "https://www.freecodecamp.org/"
             }
         ]);
-        new CursorPopper();
-        new ContactRedirect("contactBtn", "https://forms.gle/tozKdRWW2cbHqBZj8");
+        new ContactRedirect("contactBtn");
     }
 }
 
+new SmokeTrail();
 new App();
