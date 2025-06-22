@@ -73,8 +73,7 @@ p {
   border-radius: inherit;
 }
 
-.skill-link:hover,
-.skill-link:focus {
+.skill-link:hover {
   background: linear-gradient(135deg, #1e1e1e, #2c3e50);
   transform: translateY(-3px) scale(1.05);
   color: white;
