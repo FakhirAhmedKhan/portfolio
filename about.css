@@ -141,8 +141,8 @@ p {
   }
 
   .skills-wrapper {
-    gap: 0.5rem;
-    padding: 0.6rem;
+    gap: 9rem;
+    padding: 3rem;
   }
 
   .skill-link {
