@@ -78,3 +78,30 @@
     margin: 0 4px;
   }
 }
+.footer {
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  font-family: "Segoe UI", sans-serif;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.footer-text {
+  font-size: 1.1rem;
+  animation: fade-glow 3s ease-in-out infinite;
+}
+
+/* Animation effect */
+@keyframes fade-glow {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 15px #00ffd5;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 3px #fff, 0 0 10px #00bcd4;
+  }
+}

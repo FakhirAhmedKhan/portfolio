@@ -19,7 +19,7 @@ A modern, interactive portfolio website built with HTML, CSS, and JavaScript. Th
 ## 🛠️ Technologies Used
 
 - HTML5 (Semantic markup)
-- CSS3 (Modern features: Flexbox, Grid, Animations)
+- CSS3 (Modern features: flexbox, Grid, Animations)
 - JavaScript (ES6+, OOP, optimized for performance)
 - Custom particle effects system
 - Responsive design principles

@@ -133,21 +133,34 @@ p {
 
 @media (max-width: 400px) {
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 
-  .skills-wrapper {
-    gap: 9rem;
-    padding: 3rem;
-  }
+  @media (max-width: 400px) {
+    .skills-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  .skill-link {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.85rem;
-    border-radius: 0.6rem;
+    .skill-link {
+      flex: 1 0 21%;
+      max-width: 26%;
+      max-height: 15%;
+      padding: 0.99rem;
+      font-size: 0.75rem;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+
+    .skill-link:hover {
+      transform: scale(1.05);
+    }
   }
 }
