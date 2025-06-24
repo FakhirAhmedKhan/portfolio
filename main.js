@@ -99,6 +99,7 @@ class App {
                     backDelay: 1000,
                     backSpeed: 50,
                     loop: true,
+                    showCursor: false,
                 })
         );
         new TypedText("navText", {
@@ -240,33 +241,9 @@ class App {
                 link: "https://www.w3schools.com/react/default.asp"
             },
             {
-                name: "UI / UX",
-                link: "https://www.youtube.com/watch?v=c9Wg6Cb_YlU"
-            },
-            {
                 name: "Python",
                 link: "https://www.w3schools.com/python/default.asp"
             },
-            {
-                name: "GIT",
-                link: "https://www.freecodecamp.org/"
-            },
-            {
-                name: "Excel",
-                link: "https://www.freecodecamp.org/"
-            },
-            {
-                name: "AI / ML",
-                link: "https://www.freecodecamp.org/"
-            },
-            {
-                name: "Data Science",
-                link: "https://www.freecodecamp.org/"
-            },
-            {
-                name: "DSA",
-                link: "https://www.freecodecamp.org/"
-            }
         ]);
         new ContactRedirect("contactBtn");
     }
